@@ -1,0 +1,61 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Project'
+theme = 'hugo-hero'
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.92.0"
+
+[params]
+  google_analytics_id=""
+
+  [params.logo]
+    mobile = "images/logo-mobile.svg"
+    mobile_height = "36px"
+    mobile_width = "36px"
+    desktop = "images/logo.svg"
+    desktop_height = "29px"
+    desktop_width = "217px"
+    alt = "Hugo Hero"
+
+  [params.homepage_meta_tags]
+    meta_description = "Your church's description here"
+    meta_og_title = "Your Church Name"
+    meta_og_type = "website"
+    meta_og_url = "https://example.org/"
+    meta_og_image = ""
+    meta_og_description = "Your church's description here"
+    meta_twitter_card = "summary"
+    meta_twitter_site = ""
+    meta_twitter_creator = ""
+
+[[menu.main]]
+	name = "Services"
+	url = "/services/"
+    weight = 1
+
+[[menu.main]]
+    name = "Work"
+    url = "/work/"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+[[menu.main]]
+    name = "History"
+    url = "/history/"
+    weight = 3
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+  pages = "/:filename/"
