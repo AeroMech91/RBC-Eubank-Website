@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Project'
+title = 'Refuge Baptist Church'
 theme = 'hugo-hero'
 
 [module]
@@ -21,8 +21,8 @@ theme = 'hugo-hero'
     alt = "Hugo Hero"
 
   [params.homepage_meta_tags]
-    meta_description = "Your church's description here"
-    meta_og_title = "Your Church Name"
+    meta_description = "Community lead by faith. Pastor Scotty Nix"
+    meta_og_title = "Refuge Baptist Church"
     meta_og_type = "website"
     meta_og_url = "https://example.org/"
     meta_og_image = ""
