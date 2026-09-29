@@ -1,0 +1,20 @@
+<div class='header header-absolute'>
+  <div class="container">
+    <div class="logo" style="width: 220px;">
+      <a href="{{ .Site.BaseURL }}"><span class="site-name" style="display: block; color: #1c3ed3; font-size: 1.15rem; font-weight: 700; line-height: 1.2; white-space: nowrap;">{{ .Site.Title }}</span></a>
+    </div>
+    <div class="logo-mobile" style="width: 180px;">
+      <a href="{{ .Site.BaseURL }}"><span class="site-name" style="display: block; color: #1c3ed3; font-size: 1rem; font-weight: 700; line-height: 1.2; white-space: nowrap;">{{ .Site.Title }}</span></a>
+    </div>
+    {{ partial "main-menu.html" . }}
+    {{ partial "hamburger.html" . }}
+  </div>
+</div>
+<style>
+  .main-menu { display: none; }
+  .hamburger { display: block; }
+  @media (min-width: 992px) {
+    .main-menu { display: block; }
+    .hamburger { display: none; }
+  }
+</style>

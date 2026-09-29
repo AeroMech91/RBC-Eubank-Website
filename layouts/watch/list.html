@@ -1,0 +1,18 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-watch{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="container pt-8 pb-8 pt-md-12 pb-md-12">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-9">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ .Content }}
+      {{ with .Params.youtubeURL }}
+      <p><a class="button button-primary" href="{{ . }}" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

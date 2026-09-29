@@ -1,0 +1,22 @@
+<style>
+  .hero-image-setheight::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .42);
+    pointer-events: none;
+  }
+  .hero-image-setheight .container {
+    position: relative;
+    z-index: 1;
+  }
+</style>
+<div id="hero" class="hero-image hero-image-setheight" style="background-image: url('{{ .background | relURL }}'); background-color: transparent; background-blend-mode: normal;">
+  <div class="container">
+    <div class="hero-text">
+      <span class="hero-section">{{ .section }}</span>
+      <h1>{{ .heading }}</h1>
+      <p>{{ .subheading }}</p>
+    </div>
+  </div>
+</div>
