@@ -18,37 +18,31 @@
 {{ define "main" }}
 {{ partial "hero-image-fullscreen.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .) }}
 
-{{ $headless := .Site.GetPage "/homepage" }}
-{{ $reusablePages := sort ($headless.Resources.ByType "page") ".Params.weight" }}
-{{ range first 1 $reusablePages }}
-{{ $section := . }}
-<section id="home" class="strip strip-white">
-  <div class="container pt-8 pb-8 pt-md-14 pb-md-14">
-    <div class="row">
-      <div class="col-12 col-md-6 offset-md-6">
-        <h2 class="text-primary text-capitalize">{{ .Title }}</h2>
-        {{ .Content }}
-        {{ with .Params.button }}<a class="button button-primary" href="{{ $section.Params.buttonLink | relURL }}">{{ . }}</a>{{ end }}
-      </div>
-    </div>
-  </div>
+{{ $eventsPage := .Site.GetPage "/events" }}
+<section id="events" class="strip strip-white">
+	<div class="container pt-8 pb-8 pt-md-12 pb-md-12">
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-9">
+				<h2 class="text-primary">Upcoming Events</h2>
+				<p class="lead">News from our church and important upcoming and past events.</p>
+				{{ $events := $eventsPage.Pages.ByDate.Reverse }}
+				{{ if $events }}
+				<div class="church-events">
+					{{ range first 5 $events }}
+					<article class="church-event mb-4">
+						<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+						<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+						{{ .Summary }}
+					</article>
+					{{ end }}
+				</div>
+				{{ else }}
+				<p>Church news and important events will be posted here.</p>
+				{{ end }}
+			</div>
+		</div>
+	</div>
 </section>
-{{ end }}
-
-{{ range first 1 (after 1 $reusablePages) }}
-{{ $section := . }}
-<section class="strip bg-primary">
-  <div class="container pt-8 pb-8 pt-md-12 pb-md-12">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 text-center text-white">
-        <h2>{{ .Title }}</h2>
-        {{ .Content }}
-        {{ with .Params.button }}<a class="button button-white" href="{{ $section.Params.buttonLink | relURL }}">{{ . }}</a>{{ end }}
-      </div>
-    </div>
-  </div>
-</section>
-{{ end }}
 {{ end }}
 
 {{ define "footer_js" }}{{ end }}

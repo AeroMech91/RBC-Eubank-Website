@@ -1,0 +1,29 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-church-memories{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="container pt-8 pb-8 pt-md-12 pb-md-12">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-9">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ $memories := .Pages.ByDate.Reverse }}
+      {{ if $memories }}
+      <div class="church-memories">
+        {{ range $memories }}
+        <article class="church-memory mb-4">
+          <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          {{ .Summary }}
+          <a href="{{ .RelPermalink }}">Read memory</a>
+        </article>
+        {{ end }}
+      </div>
+      {{ else }}
+      <p>Church memories will be shared here.</p>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

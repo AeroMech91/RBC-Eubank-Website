@@ -2,6 +2,7 @@ baseURL = 'https://www.rbceubank.com/'
 languageCode = 'en-us'
 title = 'Refuge Baptist Church'
 theme = 'hugo-hero'
+buildFuture = true
 
 [module]
   [module.hugoVersion]
@@ -39,7 +40,7 @@ theme = 'hugo-hero'
 [[menu.main]]
     name = "Ministries"
     url = "/ministries/"
-    weight = 2
+  weight = 2
 
 [[menu.main]]
   name = "Youth Services"
@@ -47,19 +48,24 @@ theme = 'hugo-hero'
   weight = 3
 
 [[menu.main]]
+  name = "Church Memories"
+  url = "/church-memories/"
+  weight = 4
+
+[[menu.main]]
   name = "Watch on YouTube"
   url = "/watch/"
-  weight = 4
+  weight = 5
 
 [[menu.main]]
     name = "About"
     url = "/about/"
-  weight = 5
+  weight = 6
 
 [[menu.main]]
     name = "Contact"
     url = "/contact/"
-  weight = 6
+  weight = 7
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"

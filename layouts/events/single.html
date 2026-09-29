@@ -1,0 +1,16 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-event{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<article class="container pt-8 pb-8 pt-md-12 pb-md-12">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-9">
+      <p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+      <h1>{{ .Title }}</h1>
+      <div class="content">{{ .Content }}</div>
+      <p><a href="{{ "events/" | relURL }}">Back to Events</a></p>
+    </div>
+  </div>
+</article>
+{{ end }}

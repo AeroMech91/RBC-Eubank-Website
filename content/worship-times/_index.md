@@ -4,7 +4,7 @@ aliases:
   - /services/
 heroHeading: 'Worship Times'
 heroSubHeading: 'Join us each week in Eubank, Kentucky.'
-heroBackground: 'images/jason-blackeye-1191801-unsplash.jpg'
+heroBackground: 'images/church-front.png'
 ---
 
 ## Sunday

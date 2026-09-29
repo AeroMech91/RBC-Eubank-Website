@@ -1,16 +1,39 @@
 <div class='header header-absolute'>
   <div class="container">
     <div class="logo" style="width: 220px;">
-      <a href="{{ .Site.BaseURL }}"><span class="site-name" style="display: block; color: #1c3ed3; font-size: 1.15rem; font-weight: 700; line-height: 1.2; white-space: nowrap;">{{ .Site.Title }}</span></a>
+      <a href="{{ "/" | relURL }}"><img src="{{ "images/home-icon.png" | relURL }}" alt="Refuge Baptist Church home" width="220" height="101" fetchpriority="high" /></a>
     </div>
     <div class="logo-mobile" style="width: 180px;">
-      <a href="{{ .Site.BaseURL }}"><span class="site-name" style="display: block; color: #1c3ed3; font-size: 1rem; font-weight: 700; line-height: 1.2; white-space: nowrap;">{{ .Site.Title }}</span></a>
+      <a href="{{ "/" | relURL }}"><img src="{{ "images/home-icon.png" | relURL }}" alt="Refuge Baptist Church home" width="180" height="82" fetchpriority="high" /></a>
     </div>
     {{ partial "main-menu.html" . }}
     {{ partial "hamburger.html" . }}
   </div>
 </div>
 <style>
+  .header .logo img,
+  .header .logo-mobile img {
+    display: block;
+    width: auto;
+    height: 48px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .header .logo a,
+  .header .logo-mobile a {
+    display: flex;
+    align-items: center;
+  }
+  @media (max-width: 575.98px) {
+    .header .logo-mobile img { height: 42px; }
+  }
+  .main-menu-mobile {
+    overflow-y: auto;
+    padding: 8px 0;
+  }
+  .main-menu-mobile ul {
+    font-size: 1.4rem;
+  }
   .main-menu { display: none; }
   .hamburger { display: block; }
   @media (min-width: 992px) {
