@@ -1,9 +1,16 @@
 ---
-title: 'We Help Business Grow'
+title: 'Worship Times'
 weight: 1
-background: 'images/kevin-bhagat-461952-unsplash.jpg'
-button: 'Our Work'
-buttonLink: 'work'
+button: 'Full Schedule'
+buttonLink: '/worship-times/'
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian. Aeterno quaestio constituto sea an, no eum intellegat assueverit.
+**Sunday**
+
+- 10 AM: Sunday School for all ages
+- 11 AM: Worship Service
+- 6 PM: Night Worship Service
+
+**Wednesday**
+
+- 7 PM: Bible study for all ages

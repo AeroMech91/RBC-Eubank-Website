@@ -1,9 +1,8 @@
 ---
-title: 'Our Difference'
+title: 'Ministries'
 weight: 2
-background: ''
-button: 'About Us'
-buttonLink: 'about'
+button: 'Explore Ministries'
+buttonLink: '/ministries/'
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo,
+Sunday School welcomes all ages, and Bible study meets Wednesday evenings. We gather to worship, study Scripture, and grow together in faith.

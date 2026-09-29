@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://www.rbceubank.com/'
 languageCode = 'en-us'
 title = 'Refuge Baptist Church'
 theme = 'hugo-hero'
@@ -18,37 +18,32 @@ theme = 'hugo-hero'
     desktop = "images/logo.svg"
     desktop_height = "29px"
     desktop_width = "217px"
-    alt = "Hugo Hero"
+    alt = "Refuge Baptist Church"
 
   [params.homepage_meta_tags]
-    meta_description = "Community lead by faith. Pastor Scotty Nix"
+    meta_description = "Worship and Bible study at Refuge Baptist Church in Eubank, Kentucky."
     meta_og_title = "Refuge Baptist Church"
     meta_og_type = "website"
-    meta_og_url = "https://example.org/"
+    meta_og_url = "https://www.rbceubank.com/"
     meta_og_image = ""
-    meta_og_description = "Your church's description here"
+    meta_og_description = "Join Refuge Baptist Church in Eubank, Kentucky for worship, Sunday School, and Bible study."
     meta_twitter_card = "summary"
     meta_twitter_site = ""
     meta_twitter_creator = ""
 
 [[menu.main]]
-	name = "Services"
-	url = "/services/"
+	name = "Worship Times"
+	url = "/worship-times/"
     weight = 1
 
 [[menu.main]]
-    name = "Work"
-    url = "/work/"
+    name = "Ministries"
+    url = "/ministries/"
     weight = 2
 
 [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 3
-
-[[menu.main]]
-    name = "History"
-    url = "/history/"
     weight = 3
 
 [[menu.main]]
