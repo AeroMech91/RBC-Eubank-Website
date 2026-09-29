@@ -4,15 +4,16 @@ aliases:
   - /services/
 heroHeading: 'Worship Times'
 heroSubHeading: 'Join us each week in Eubank, Kentucky.'
-heroBackground: 'images/church-front.png'
+heroBackground: 'images/Cloud Banner.png'
 ---
 
 ## Sunday
 
-- **10 AM:** Sunday School for all ages
-- **11 AM:** Worship Service
-- **6 PM:** Night Worship Service
+- **10am:** Sunday School for all ages
+- **11am:** Sunday morning worship service
+- **6pm:** Sunday night worship service and youth service night
 
 ## Wednesday
 
-- **7 PM:** Bible study for all ages
+- **7pm:** Bible study for all ages
+- *Dinner provided for the youth*

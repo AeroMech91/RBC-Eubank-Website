@@ -1,0 +1,17 @@
+{{ define "header_css" }}
+<link rel="stylesheet" href="{{ "css/worship-times.css" | relURL }}">
+{{ end }}
+{{ define "body_classes" }}page-worship-times{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+<div class="worship-times-banner" style="--worship-banner-image: url('{{ .Params.heroBackground | relURL }}')" aria-hidden="true"></div>
+<section class="worship-times-section">
+  <div class="container">
+    <h1 class="title-1 worship-times-title">{{ .Title }}</h1>
+    <div class="worship-times-content">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
