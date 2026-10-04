@@ -18,27 +18,23 @@
 {{ define "main" }}
 {{ partial "hero-image-fullscreen.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .) }}
 
-{{ $eventsPage := .Site.GetPage "/events" }}
-<section id="events" class="strip strip-white">
+<section id="events" class="strip strip-white" style="background-color: #e6e6e6;">
 	<div class="container pt-8 pb-8 pt-md-12 pb-md-12">
 		<div class="row justify-content-center">
-			<div class="col-12 col-lg-9">
-				<h2 class="text-primary">Upcoming Events</h2>
-				<p class="lead">News from our church and important upcoming and past events.</p>
-				{{ $events := $eventsPage.Pages.ByDate.Reverse }}
-				{{ if $events }}
-				<div class="church-events">
-					{{ range first 5 $events }}
-					<article class="church-event mb-4">
-						<p><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time></p>
-						<h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-						{{ .Summary }}
-					</article>
-					{{ end }}
+			<div class="col-12 col-lg-9" style="text-align: center; background-color: #e6e6e6; padding: 1.5rem 1rem; border-radius: 6px;">
+				<h2 style="font-family: 'Times New Roman', Times, serif; font-weight: bold; text-decoration: underline; color: #0680da; margin-bottom: 1.5rem; font-size: 2.2em;">Upcoming Events</h2>
+				<div style="font-family: 'Times New Roman', Times, serif; color: #111; line-height: 1.8; font-size: 1.2em;">
+					<p style="margin: 0; font-size: 1.2em; font-weight: bold; color: #0680da;">October</p>
+					<p style="margin: 0;">10/03/26 - "Jesus Loves You!" goodie bag handout @ Somerset Walmart (10am)</p>
+					<p style="margin: 0;">10/11/26 - Deposits are due for the "Extreme Winter" youth trip</p>
+					<p style="margin: 0;">10/17/26 - Fall Harvest Celebration featuring trash can cooking</p>
+					<p style="margin: 0;">10/26/26 through 10/30/26 - Revival! Featuring brother Jason Bertram</p>
+					<p style="margin-top: 1.5rem; margin-bottom: 0; font-size: 1.2em; font-weight: bold; color: #0680da;">November</p>
+					<p style="margin-top: 2rem; margin-bottom: 0; font-size: 1.2em; font-weight: bold; color: #0680da;">December</p>
+					<p style="margin-top: 0.5rem; margin-bottom: 0;">Wise Men Still Seek Him @ Pulaski Co. Fairgrounds</p>
+					<p style="margin: 0;">Lottie Moon Offering</p>
+					<p style="margin: 0;">12/27/26 through 12/29/26 - Youth "Extreme Winter" trip</p>
 				</div>
-				{{ else }}
-				<p>Church news and important events will be posted here.</p>
-				{{ end }}
 			</div>
 		</div>
 	</div>
